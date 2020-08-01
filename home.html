@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        my page
+    </title>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length } for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; } for
+                (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); } slides[slideIndex -
+                    1].style.display = "block"; dots[slideIndex - 1].className += " active";
+        } </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <center>
+            <h2>EMED.COM</h2>
+        </center>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <div class="dropbtn">Category</div>
+                <div class="dropdown-content">
+                    <a href="diabetics.html" style="color: blanchedalmond;font-size: medium;">Covid Supply</a>
+                    <a href="diabetics.html" style="color: blanchedalmond;font-size: medium;">Diabetics</a>
+                    <a href="diabetics.html" style="color: blanchedalmond; font-size: medium;">Cold & Fever</a>
+                    <a href="diabetics.html" style="color: blanchedalmond;font-size: medium;">Blood pressure</a>
+                    <a href="diabetics.html" style="color: blanchedalmond;font-size: medium;">CardioVascukar Meds</a>
+                </div>
+            </div>
+            <a href="https://www.medscape.com/">MedUpdates</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    </header>
+    <section>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/med5.jpeg" style="width:1400px;height:400px;">
+                <div class="text">offer item 1</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/med6.jpeg" style="width:1400px;height:400px;">
+                <div class="text">offer item 2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/38b226df-afe0-4e93-8215-1f4e254ff4da.jpg" style="width:1400px;height:400px;">
+                <div class="text">offer item 3</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <br>
+        <center><b>Lightning Offers of the Week!</b></center>
+        <br>
+        <div onclick="window.location.href='item1.html'">
+            <p><img src="images/images.jpg" class="img"></p>
+            <p>Some Random picture copied from internet and absolutely fake rating</p>
+
+
+        </div>
+    </section>
+    <footer>
+        <center>Saving Lives Even in this LockDown!</center>
+    </footer>
+    <script>
+        showSlides(slideIndex);
+    </script>
+</body>
+
+</html>
