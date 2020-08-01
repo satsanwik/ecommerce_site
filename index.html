@@ -16,13 +16,14 @@
     <br>
 
     <h3>Login in to your account</h3>
-    <input class="text" name="id" placeholder="Enter username" style="font-size: 15px">
+    <form action="home.html" method="POST">
+    <input class="text" name="id" placeholder="Enter username" style="font-size: 15px" required>
     <br>
-    <input class="password" name="pass" type="password" placeholder="enter password" style="font-size: 15px">
+    <input class="password" name="pass" type="password" placeholder="enter password" style="font-size: 15px" required>
     <a href="signup.html" style="font-size: 13px;padding-left: 15px">Forgot password?</a><br><br>
 
     <input class="submit" type="submit" name="submit" value="submit">
-
+    </form>
     <h5>not an account?</h5>
 
     <a href="signup.html">Signup</a>
